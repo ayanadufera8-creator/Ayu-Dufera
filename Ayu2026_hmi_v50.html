@@ -627,6 +627,11 @@
         .goog-te-gadget > span > a { display: none !important; }
     </style>
     <script type="text/javascript">
+        /* Force English as default — clear any saved Google Translate cookie */
+        (function() {
+            document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+            document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + location.hostname;
+        })();
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'en',
