@@ -630,6 +630,7 @@
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'en',
+                includedLanguages: 'om,am,en,ar,fr,de,zh-CN,es,pt,tr,sw,so,ti',
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
                 autoDisplay: false,
                 multilanguagePage: true
@@ -675,10 +676,7 @@
 
         <!-- Language button + Google Translate — absolute top right -->
         <div style="position:absolute;top:4px;right:6px;z-index:30;display:flex;flex-direction:column;align-items:flex-end;gap:3px;">
-            <button class="lang-btn active" id="langToggleBtn" onclick="cycleLanguage()"
-                style="background:rgba(0,0,0,0.45);border:1px solid rgba(255,255,255,0.4);color:#fff;font-weight:bold;padding:4px 9px;border-radius:20px;font-size:10px;box-shadow:0 2px 5px rgba(0,0,0,0.4);">
-                🌐 ENG
-            </button>
+
             <div id="google_translate_element"></div>
         </div>
 
